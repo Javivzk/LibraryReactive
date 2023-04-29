@@ -10,5 +10,8 @@ import reactor.core.publisher.Mono;
 public interface LibraryRepository extends ReactiveMongoRepository<Library, String> {
 
     Flux<Library> findAll();
-    Mono<Library> findByCode(String code);
+    Mono<Library> findById(String id);
+
+    Flux<Library> findByCity(String city);
+
 }

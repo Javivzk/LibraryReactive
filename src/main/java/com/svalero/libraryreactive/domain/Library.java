@@ -9,6 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Field;
 
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @Document(value = "libraries")
 public class Library {
 
@@ -17,5 +18,12 @@ public class Library {
     @Field
     private String code;
     @Field
-    private int price;
+    private String name;
+    @Field
+    private String city;
+    @Field
+    private String address;
+    @Field
+    private String phone;
+
 }

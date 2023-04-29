@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "12b3ee8d-3f88-461c-a9bf-46b57d0e7172",
+		"name": "libraryreactive",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23968222"
+	},
+	"item": [
+		{
+			"name": "libraries",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"code\": \"Library- {{$randomInt}}\",\r\n    \"name\": \"Biblioteca Municipal\",\r\n    \"city\": \"Casetas\",\r\n    \"address\": \"Paseo independencia\",\r\n    \"phone\": 976796312\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/libraries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"libraries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "libraries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/libraries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"libraries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "library/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/library/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"library",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "library/{city}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/libraries/Casetas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"libraries",
+						"Casetas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "library/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\": \"Library- {{$randomInt}}\",\r\n    \"name\": \"Biblioteca Municipal\",\r\n    \"city\": \"Casetas\",\r\n    \"address\": \"Avenida Zaragoza\",\r\n    \"phone\": 976796312\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/library/644d9600367bf10fc0d1b6dc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"library",
+						"644d9600367bf10fc0d1b6dc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "library",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/library/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"library",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
