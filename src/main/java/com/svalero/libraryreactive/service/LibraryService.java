@@ -8,6 +8,13 @@ import reactor.core.publisher.Mono;
 public interface LibraryService {
 
     Flux<Library> findAll();
-    Mono<Library> findByCode(String code);
+    Mono<Library> findById(String id);
     Mono<Library> addLibrary(Library library);
+    Flux<Library> findByCity(String city);
+    Mono<Library> updateLibrary(String id, Library newLibrary);
+
+    Mono<Void> deleteLibrary(String id);
+
+
+
 }
